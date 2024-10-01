@@ -1,8 +1,11 @@
 # A1-database
 # Contributers:
 Kaila Aquino - kaaquino@calpoly.edu, 
+
 Angelika, 
+
 Alberto, 
+
 Zaid Zarate - zgcamach@calpoly.edu
 
 

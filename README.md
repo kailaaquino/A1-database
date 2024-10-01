@@ -3,7 +3,7 @@
 Kaila Aquino - kaaquino@calpoly.edu, 
 Angelika, 
 Alberto, 
-Zaid 
+Zaid Zarate - zgcamach@calpoly.edu
 
 
 # Proposal: 

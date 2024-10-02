@@ -2,7 +2,7 @@
 # Contributers:
 Kaila Aquino - kaaquino@calpoly.edu, 
 
-Angelika, 
+Angelika, acanete@calpoly.edu,
 
 Alberto, 
 

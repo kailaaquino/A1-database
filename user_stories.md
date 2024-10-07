@@ -1,0 +1,43 @@
+# User Stories
+As a hard-core gamer, I want to know if I am doing better than other players in the game, so that I can change my strategy according to my progress.
+As president of a gaming club, I want to be able to see the scores of other users, so that I can see who is better or worse in that game. 
+As a game developer, I want to observe how the game’s achievement system works, to 	learn about user engagement with a game. 
+As an everyday user, I want to see who is at the top of the leaderboard for the day, so that I know who to beat.
+As the game admin, I want to be able to store all the score information into a file. 
+As the game admin, I want to be able to average the players’ score so I know how to make the game harder 
+As an average player, I want to be able to see my score history, so that I can track if I’m getting better.
+As a social gamer, I want to share my highest scores on social media, so I can brag about my achievements and encourage my friends to play. 
+As a speedrunner, I want to track the time taken to reach certain score milestones, so I can train myself for faster completion. 
+As a student interested in creating video games I wanted to learn how they work by making one and storing high scores for the users
+As a student working on a personal project I want to learn how the game is set up and designed
+As a sponsor for computer science I want to know what the result of the projects can look like and what it takes to make them
+
+# Exceptions
+A player enters characters or symbols that are not allowed on the scoreboard names
+- Return a message reminding them to only use letters and numbers for their name
+A player forgets their password or username
+- Since they should have a registered email address, an email with their information will be sent to them to help them sign in
+Other users try to update their score and artificially give themselves a large score
+- Implement security measures to block users from having access to update their score and others
+The database attempts to calculate the average score of a user that has not played a game yet
+- Return a score of 0 to avoid getting a Divide by Zero error
+Someone attempts to write a SQL attack when they register their name into the database
+- Set restrictions on what is considered a valid name 
+There is an error with your highest score not showing up
+- Edit the code to only output the highest score of someone  regardless of date
+Someone creates a ton of bots to inflate their score artificially and get the highest score
+- Set some code so that multiple trials of the same name cannot be done concurrently
+A user attempts to start the game without entering a name
+- Return error message that user needs to enter a name
+There are two players with the exact name, hard to link score and achievements to the right player 
+- Names are unique
+A player receives a score for an achievement but they already have that achievement 
+- Check players achievements before assigning one 
+A player wants to keep replaying without having to input their name every time
+- Send info after each playthrough under the same initial name given if still in the same tab, or average the scores after the playthrough is finished and send the average
+A player accidentally inputs the wrong name after playing and wants to change it later
+- Allow a backdoor that saves the data which can be changed by the developers. *susceptible to social engineering*
+A player’s computer dies/crashes while they are playing 
+- The system sends the last score checked to the database with the name given. 
+Someone will try to write SQL query to find the password
+- We will hash the password using python library so no one can access passwords

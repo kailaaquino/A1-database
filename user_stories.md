@@ -13,31 +13,31 @@
 - As a sponsor for computer science I want to know what the result of the projects can look like and what it takes to make them
 
 # Exceptions
--A player enters characters or symbols that are not allowed on the scoreboard names
+- A player enters characters or symbols that are not allowed on the scoreboard names
 -- Return a message reminding them to only use letters and numbers for their name
--A player forgets their password or username
+- A player forgets their password or username
 -- Since they should have a registered email address, an email with their information will be sent to them to help them sign in
--Other users try to update their score and artificially give themselves a large score
+- Other users try to update their score and artificially give themselves a large score
 -- Implement security measures to block users from having access to update their score and others
--The database attempts to calculate the average score of a user that has not played a game yet
+- The database attempts to calculate the average score of a user that has not played a game yet
 -- Return a score of 0 to avoid getting a Divide by Zero error
--Someone attempts to write a SQL attack when they register their name into the database
+- Someone attempts to write a SQL attack when they register their name into the database
 -- Set restrictions on what is considered a valid name 
--There is an error with your highest score not showing up
+- There is an error with your highest score not showing up
 -- Edit the code to only output the highest score of someone  regardless of date
--Someone creates a ton of bots to inflate their score artificially and get the highest score
+- Someone creates a ton of bots to inflate their score artificially and get the highest score
 -- Set some code so that multiple trials of the same name cannot be done concurrently
--A user attempts to start the game without entering a name
+- A user attempts to start the game without entering a name
 -- Return error message that user needs to enter a name
--There are two players with the exact name, hard to link score and achievements to the right player 
+- There are two players with the exact name, hard to link score and achievements to the right player 
 -- Names are unique
 -A player receives a score for an achievement but they already have that achievement 
 -- Check players achievements before assigning one 
--A player wants to keep replaying without having to input their name every time
+- A player wants to keep replaying without having to input their name every time
 -- Send info after each playthrough under the same initial name given if still in the same tab, or average the scores after the playthrough is finished and send the average
--A player accidentally inputs the wrong name after playing and wants to change it later
+- A player accidentally inputs the wrong name after playing and wants to change it later
 -- Allow a backdoor that saves the data which can be changed by the developers. *susceptible to social engineering*
--A player’s computer dies/crashes while they are playing 
+- A player’s computer dies/crashes while they are playing 
 -- The system sends the last score checked to the database with the name given. 
--Someone will try to write SQL query to find the password
+- Someone will try to write SQL query to find the password
 -- We will hash the password using python library so no one can access passwords

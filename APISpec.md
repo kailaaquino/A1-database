@@ -2,13 +2,14 @@
 
 ## 1. Customer Purchasing
 
-The API calls are made in this sequence when making a purchase:
-1. `Get Catalog`
-2. `Customer Visits`
-3. `Check Check let's test this mf`
-4. `Add Item to Cart` (Can be called multiple times)
-5. `Checkout Cart`
-6. `Search Orders`
+The API calls are made in this sequence when playing the game:
+1. get name and password (log in)
+2. post name and password (sign up) 
+3. post score
+4. post achievements
+5. get personal scores
+6. get past achievements 
+7. get leaderboard
 
 ### 1.1. Get Catalog - `/catalog/` (GET)
 

@@ -4,7 +4,7 @@ Kaila Aquino - kaaquino@calpoly.edu,
 
 Angelika, acanete@calpoly.edu,
 
-Alberto, 
+Alberto, alaracor@calpoly.edu
 
 Zaid Zarate - zgcamach@calpoly.edu
 

@@ -131,8 +131,18 @@ The API calls are made in this sequence accessing achievements:
 
 Posts player's achievements for this round. It is added to the achievements table.
 
-**Response**:
+**Request**:
 
+```json
+[
+  {
+    "player_id": "integer"
+  }
+]
+```
+
+
+**Response**:
 ```json
 [
     {

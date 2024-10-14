@@ -119,9 +119,9 @@ Uploads the players score the to data base after playing the game, the score wil
 ```json
 [
   {
-    "player_id": "integer",
-    "score_id": "integer",
-    "score": "integer",
+    "player_id": integer,
+    "score_id": integer,
+    "score": integer,
   }
 ]
 ```
@@ -131,7 +131,7 @@ Uploads the players score the to data base after playing the game, the score wil
 ```json
 [
     {
-         "success": "boolean"
+         "success": boolean
     }
 ]
 ```
@@ -145,7 +145,7 @@ Gets a list of all the previous scores associated with a players id.
 ```json
 [
   {
-    "player_id": "integer"
+    "player_id": integer
   }
 ]
 ```
@@ -154,9 +154,9 @@ Gets a list of all the previous scores associated with a players id.
 ```json
 [
   {
-    "player_id": "integer",
-    "score_id": "integer",
-    "score": "integer",
+    "player_id": integer,
+    "score_id": integer,
+    "score": integer,
   }
 ]
 ```

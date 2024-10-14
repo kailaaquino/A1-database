@@ -12,9 +12,9 @@ The API calls are made in this sequence when playing the game:
 7. get leaderboard
 8. delete user
 
-## 1. Player Login
+## 1. Player Account
 
-### 1.1. Get User and Password - `/play/?username=yourUsername` (GET)
+### 1.1. Get User and Password - `/account/?username=yourUsername` (GET)
 
 **Request**:
 
@@ -38,7 +38,7 @@ The API calls are made in this sequence when playing the game:
 
 ```
 
-### 1.2. Search Player - `/play/{player_id}` (GET)
+### 1.2. Search Player - `/account/{player_id}` (GET)
 
 Retrieves player info. Displays user's high score, dates, achievements, and ranking on leader boards.
 

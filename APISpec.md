@@ -6,10 +6,10 @@ The API calls are made in this sequence when playing the game:
 1. get name and password (log in)
 2. post name and password (sign up) 
 3. post score
-4. post achievements
-5. get personal scores
-6. get past achievements 
-7. get leaderboard
+4. get personal scores
+5. post achievements
+7. get past achievements 
+8. get leaderboard
 
 ## 1. Player Login
 
@@ -105,13 +105,14 @@ a single delivery.
 ]
 ```
 
-## 3. Barrel Purchases
+## 3. POST score 
+Uploads players score to the data base.
 
 The API calls are made in this sequence when Barrel Purchases can be made:
 1. `Get Barrel Purchase Plan`
 2. `Deliver Barrels`
 
-### 3.1. Get Barrel Purchase Plan - `/barrels/plan` (POST)
+### 3.1. Get Barrel Purchase Plan - `/score/postScore` (POST)
 
 Gets the plan for purchasing wholesale barrels. The call passes in a catalog of available barrels
 and the shop returns back which barrels they'd like to purchase and how many.

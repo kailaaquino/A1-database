@@ -105,28 +105,23 @@ a single delivery.
 ]
 ```
 
-## 3. POST score 
-Uploads players score to the data base.
+## 3. Players' scores 
 
-The API calls are made in this sequence when Barrel Purchases can be made:
-1. `Get Barrel Purchase Plan`
-2. `Deliver Barrels`
+The API calls are made in this sequence the game is played:
+1. `Post player's score `
+2. `Get player's score`
 
-### 3.1. Get Barrel Purchase Plan - `/score/postScore` (POST)
-
-Gets the plan for purchasing wholesale barrels. The call passes in a catalog of available barrels
-and the shop returns back which barrels they'd like to purchase and how many.
+### 3.1. POST Players Score - `/score/postScore/{player_id, score}` (POST)
+Uploads the players score the to data base after playing the game, the score will have the players ID
 
 **Request**:
 
 ```json
 [
   {
-    "sku": "string",
-    "ml_per_barrel": "integer",
-    "potion_type": [r, g, b, d], /* Where one of r, g, b, or d is set to 1 and the rest are 0. */
-    "price": "integer",
-    "quantity": "integer"
+    "player_id": "integer",
+    "score_id": "integer",
+    "score": "integer",
   }
 ]
 ```
@@ -136,27 +131,32 @@ and the shop returns back which barrels they'd like to purchase and how many.
 ```json
 [
     {
-        "sku": "string", /* Must match a sku from the catalog just passed in this call */
-        "quantity": "integer" /* A number between 1 and the quantity available for sale */
+         "success": "boolean"
     }
 ]
 ```
 
-### 3.2. Deliver Barrels - `/barrels/deliver/{order_id}` (POST)
+### 3.2. Get Players Previous scores - `/score/getScore/{player_id}` (GET)
 
-Posts delivery of barrels. order_id is a unique value representing
-a single delivery.
+Gets a list of all the previous scores associated with a players id.
 
 **Request**:
 
 ```json
 [
   {
-    "sku": "string",
-    "ml_per_barrel": "integer",
-    "potion_type": [r, g, b, d], /* Where one of r, g, b, or d is set to 1 and the rest are 0. */
-    "price": "integer",
-    "quantity": "integer"
+    "player_id": "integer"
+  }
+]
+```
+**Response**:
+
+```json
+[
+  {
+    "player_id": "integer",
+    "score_id": "integer",
+    "score": "integer",
   }
 ]
 ```

@@ -20,10 +20,8 @@ The API calls are made in this sequence when playing the game:
 ```json
 [
   {
-    "high_score": "number",
-    "dates": "string",
-    "achievements": "string",
-    "ranking": "number"
+    "username": "string",
+    "password": "string"
   }
   
 ]

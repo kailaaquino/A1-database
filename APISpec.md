@@ -123,9 +123,11 @@ Gets a list of all the previous scores associated with a players id.
 ```
 ## 3. Achievements
 
-The API calls are made in this sequence accessing achievements:
+This API call is made after finishing a game:
 1. `Post New Achievements`
-2. `Get Past Achievements`
+
+This API call is made when accessing achievements:
+1. `Get Past Achievements`
 
 ### 3.1. Post New Achievements - `/achievements/new` (POST)
 

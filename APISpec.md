@@ -121,15 +121,15 @@ Gets a list of all the previous scores associated with a players id.
   }
 ]
 ```
-## 3. Bottling
+## 3. Achievements
 
-The API calls are made in this sequence when the bottler comes:
+The API calls are made in this sequence accessing achievements:
 1. `Get Bottle Plan`
 2. `Deliver Bottles`
 
-### 3.1. Get Bottle Plan - `/bottler/plan` (POST)
+### 3.1. Post New Achievements - `/achievements/new` (POST)
 
-Gets the plan for bottling potions.
+Gets player's achievements for this round.
 
 **Response**:
 
@@ -142,7 +142,7 @@ Gets the plan for bottling potions.
 ]
 ```
 
-### 3.2. Deliver Bottles - `/bottler/deliver/{order_id}` (POST)
+### 3.2. Get Past Achievements - `/bottler/deliver/{order_id}` (GET)
 
 Posts delivery of potions. order_id is a unique value representing
 a single delivery. 
@@ -157,7 +157,6 @@ a single delivery.
   }
 ]
 ```
-
 
 ### 4. Admin Functions
 

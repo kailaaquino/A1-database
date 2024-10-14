@@ -253,7 +253,7 @@ Return a list of the top 10 players
 **Response**:
 ```json
   {
-    "Top_Scores: "list",
+    "Top_Scores": "list",
     "rank": "integer",
     "username": "string",
     "score": "integer",

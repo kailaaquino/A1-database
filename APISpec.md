@@ -5,9 +5,9 @@
 The API calls are made in this sequence when playing the game:
 1. get name and password (log in)
 2. post name and password (sign up) 
-3. post score
-4. get personal scores
-5. post achievements
+3. get personal scores
+4. post score
+6. post achievements
 7. get past achievements 
 8. get leaderboard
 

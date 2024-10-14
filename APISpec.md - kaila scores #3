@@ -13,7 +13,7 @@ The API calls are made in this sequence when playing the game:
 
 ## 1. Player Login
 
-### 1.1. Get User and Password - `/play/?username=yourUsername&password=yourPassword` (POST)
+### 1.1. Get User and Password - `/play/?username=yourUsername&password=yourPassword` (GET)
 
 **Request**:
 

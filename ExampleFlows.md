@@ -3,6 +3,9 @@
 To do so, Alice: 
 * Starts by inputting her username 
   * Calls /account/?username=yourUsername` (GET)
+* To check her stats from her previous runs
+ * calls /account/{player_id}` (GET)  
+
 
 ## Example flow 2
 ## Example flow 3

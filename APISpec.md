@@ -7,8 +7,8 @@ The API calls are made in this sequence when playing the game:
 2. post name and password (sign up)  ### 1.2
 3. get personal scores        ### 2.1
 4. post score                 ### 2.2
-5. post achievements
-6. get past achievements 
+5. post achievements          ### 3.1
+6. get past achievements      ### 3.2
 7. get leaderboard
 8. delete user
 

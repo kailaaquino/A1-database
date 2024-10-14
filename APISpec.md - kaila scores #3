@@ -31,7 +31,8 @@ The API calls are made in this sequence when playing the game:
 
 ```json
 {
-    "success": "boolean"
+    "success": "boolean",
+    "player_id": "number"
 }
 
 ```

@@ -264,7 +264,7 @@ Return a list of the top 10 players
 
 ### 8. Delete User
 
-### 8.1. Delete User - `/info/User` (POST)
+### 8.1. Delete User - `/info/Delete_username` (POST)
 
 Delete a player account from the database
 

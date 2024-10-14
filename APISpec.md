@@ -27,7 +27,7 @@ The API calls are made in this sequence when playing the game:
   }
   
 ]
-
+```
 
 **Response**:
 

@@ -243,3 +243,49 @@ Delivers capacity purchased back to shop. Called when a capacity purchase succee
   "ml_capacity": "number"
 }
 ```
+
+### 7. Leaderboard
+
+### 7.1. Get Leaderboard - `/info/Leaderboard` (GET)
+
+Return a list of the top 10 players
+
+**Response**:
+```json
+  {
+    "Top_Scores: "list",
+    "rank": "integer",
+    "username": "string",
+    "score": "integer",
+  },
+ 
+
+```
+
+### 8. Delete User
+
+### 8.1. Delete User - `/info/User` (POST)
+
+Delete a player account from the database
+
+**request**
+{
+  "username": "string"
+}
+
+**Response**:
+```json
+  {
+    "rank": "number",
+    "player_id": "number",
+    "username": "string",
+    "score": "number",
+    
+  },
+ {
+  "success": "boolean",
+}
+
+```  
+
+

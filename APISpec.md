@@ -65,52 +65,13 @@ Retrieves player info. Displays user's high score, dates, achievements, and rank
 ]
 ```
 
-
-
-## 2. Bottling
-
-The API calls are made in this sequence when the bottler comes:
-1. `Get Bottle Plan`
-2. `Deliver Bottles`
-
-### 2.1. Get Bottle Plan - `/bottler/plan` (POST)
-
-Gets the plan for bottling potions.
-
-**Response**:
-
-```json
-[
-    {
-        "potion_type": [r, g, b, d], /* r, g, b, d are integers that add up to exactly 100 */
-        "quantity": "integer"  /* Between 1 and 10000 */
-    }
-]
-```
-
-### 2.2. Deliver Bottles - `/bottler/deliver/{order_id}` (POST)
-
-Posts delivery of potions. order_id is a unique value representing
-a single delivery. 
-
-**Request**:
-
-```json
-[
-  {
-    "potion_type": [r, g, b, d],
-    "quantity": "integer"
-  }
-]
-```
-
-## 3. Players' scores 
+## 2. Players' scores 
 
 The API calls are made in this sequence the game is played:
 1. `Post player's score `
 2. `Get player's score`
 
-### 3.1. POST Players Score - `/score/postScore/{player_id, score}` (POST)
+### 2.1. POST Players Score - `/score/postScore/{player_id, score}` (POST)
 Uploads the players score the to data base after playing the game, the score will have the players ID
 
 **Request**:
@@ -135,7 +96,7 @@ Uploads the players score the to data base after playing the game, the score wil
 ]
 ```
 
-### 3.2. Get Players Previous scores - `/score/getScore/{player_id}` (GET)
+### 2.2. Get Players Previous scores - `/score/getScore/{player_id}` (GET)
 
 Gets a list of all the previous scores associated with a players id.
 
@@ -159,6 +120,43 @@ Gets a list of all the previous scores associated with a players id.
   }
 ]
 ```
+## 3. Bottling
+
+The API calls are made in this sequence when the bottler comes:
+1. `Get Bottle Plan`
+2. `Deliver Bottles`
+
+### 3.1. Get Bottle Plan - `/bottler/plan` (POST)
+
+Gets the plan for bottling potions.
+
+**Response**:
+
+```json
+[
+    {
+        "potion_type": [r, g, b, d], /* r, g, b, d are integers that add up to exactly 100 */
+        "quantity": "integer"  /* Between 1 and 10000 */
+    }
+]
+```
+
+### 3.2. Deliver Bottles - `/bottler/deliver/{order_id}` (POST)
+
+Posts delivery of potions. order_id is a unique value representing
+a single delivery. 
+
+**Request**:
+
+```json
+[
+  {
+    "potion_type": [r, g, b, d],
+    "quantity": "integer"
+  }
+]
+```
+
 
 ### 4. Admin Functions
 

@@ -124,36 +124,45 @@ Gets a list of all the previous scores associated with a players id.
 ## 3. Achievements
 
 The API calls are made in this sequence accessing achievements:
-1. `Get Bottle Plan`
-2. `Deliver Bottles`
+1. `Post New Achievements`
+2. `Get Past Achievements`
 
 ### 3.1. Post New Achievements - `/achievements/new` (POST)
 
-Gets player's achievements for this round.
+Posts player's achievements for this round. It is added to the achievements table.
 
 **Response**:
 
 ```json
 [
     {
-        "achievement": str /* shouldn't be empty */
+        "achievement": "string" /* shouldn't be empty */
     }
 ]
 ```
 
 ### 3.2. Get Past Achievements - `/achievements/history/{player_id}` (GET)
 
-Retrieves past achievements for a player_id. order_id is a unique value representing
-a single delivery. 
+Retrieves past achievements for a player_id. It should include the newest achievement. 
 
 **Request**:
 
 ```json
 [
   {
-    "potion_type": [r, g, b, d],
-    "quantity": "integer"
+    "player_id": "integer"
   }
+]
+```
+
+
+**Response**:
+
+```json
+[
+    {
+        "achievement": "string" /* shouldn't be empty */
+    }
 ]
 ```
 

@@ -136,15 +136,14 @@ Gets player's achievements for this round.
 ```json
 [
     {
-        "potion_type": [r, g, b, d], /* r, g, b, d are integers that add up to exactly 100 */
-        "quantity": "integer"  /* Between 1 and 10000 */
+        "achievement": str /* shouldn't be empty */
     }
 ]
 ```
 
-### 3.2. Get Past Achievements - `/bottler/deliver/{order_id}` (GET)
+### 3.2. Get Past Achievements - `/achievements/history/{player_id}` (GET)
 
-Posts delivery of potions. order_id is a unique value representing
+Retrieves past achievements for a player_id. order_id is a unique value representing
 a single delivery. 
 
 **Request**:

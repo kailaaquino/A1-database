@@ -9,8 +9,8 @@ The API calls are made in this sequence when playing the game:
 4. post score                 ### 2.2
 5. post achievements          ### 3.1
 6. get past achievements      ### 3.2
-7. get leaderboard
-8. delete user
+7. get leaderboard            ###4
+8. delete user                ###5
 
 ## 1. Player Account
 
@@ -33,7 +33,7 @@ The API calls are made in this sequence when playing the game:
 ```json
 {
     "success": "boolean",
-    "player_id": "number"
+    "player_id": "integer"
 }
 
 ```
@@ -47,7 +47,7 @@ Retrieves player info. Displays user's high score, dates, achievements, and rank
 ```json
 [
   {
-   "player_id": "number"
+   "player_id": "integer"
   }
   
 ]
@@ -57,10 +57,10 @@ Retrieves player info. Displays user's high score, dates, achievements, and rank
 ```json
 [
   {
-    "high_score": "number",
+    "high_score": "integer",
     "dates": "string",
     "achievements": "string",
-    "ranking": "number"
+    "ranking": "integer"
   }
   
 ]
@@ -178,75 +178,10 @@ Retrieves past achievements for a player_id. It should include the newest achiev
 ]
 ```
 
-### 4. Admin Functions
 
-### 4.1. Reset Shop - `/admin/reset` (POST)
+### 4. Leaderboard
 
-A call to reset shop will delete all inventory and in-flight carts and reset gold back to 100. The
-shop should take this as an opportunity to remove all of their inventory and set their gold back to
-100 as well.
-
-### 5. Info Functions
-
-### .1. Current time - `/info/current_time` (POST)
-
-Shares what the latest time (in game time) is. 
-
-**Request**:
-
-```json
-[
-  {
-    "day": "string",
-    "hour": "number"
-  }
-]
-```
-
-### 6. Audit Functions
-
-### 6.1. Get Inventory Summary - `/inventory/audit` (GET)
-
-Return a summary of your current number of potions, ml, and gold.
-
-**Response**:
-```json
-{
-  "number_of_potions": "number",
-  "ml_in_barrels": "number",
-  "gold": "number"
-)
-```  
-
-### 6.2 Get capacity purchase plan - `/inventory/plan` (POST)
-
-What additional potion or ML capacity the shop would like to buy. Called once a day.
-You start with 1 capacity of potion and 1 capacity of ml storage. Each potion capacity
-allows 50 potion storage. Each ml capacity allows 10k of ml storage.
-
-**Response**:
-```json
-{
-  "potion_capacity": "number",
-  "ml_capacity": "number"
-}
-```
-
-### 6.3 Deliver capacity purchased - `/inventory/deliver` (POST)
-
-Delivers capacity purchased back to shop. Called when a capacity purchase succeeds.
-
-**Request**:
-```json
-{
-  "potion_capacity": "number",
-  "ml_capacity": "number"
-}
-```
-
-### 7. Leaderboard
-
-### 7.1. Get Leaderboard - `/info/Leaderboard` (GET)
+### 4.1. Get Leaderboard - `/info/Leaderboard` (GET)
 
 Return a list of the top 10 players
 
@@ -262,9 +197,9 @@ Return a list of the top 10 players
 
 ```
 
-### 8. Delete User
+### 5. Delete User
 
-### 8.1. Delete User - `/info/Delete_username` (POST)
+### 5.1. Delete User - `/info/Delete_username` (POST)
 
 Delete a player account from the database
 

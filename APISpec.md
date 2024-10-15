@@ -3,14 +3,14 @@
 
 
 The API calls are made in this sequence when playing the game:
-1. get name and password (log in)  ### 1.1
-2. post name and password (sign up)  ### 1.2
-3. get personal scores        ### 2.1
-4. post score                 ### 2.2
-5. post achievements          ### 3.1
-6. get past achievements      ### 3.2
-7. get leaderboard            ###4
-8. delete user                ###5
+1. get name and password (connecting to player's account) (1.1)
+2. post name and password (adding new player) (1.2)
+3. get personal scores (2.1)
+4. post score (2.2)
+5. post achievements (3.1)
+6. get past achievements (3.2)
+7. get leaderboard (4)
+8. delete user (5)
 
 ## 1. Player Account
 
@@ -22,7 +22,6 @@ The API calls are made in this sequence when playing the game:
 [
   {
     "username": "string",
-    "password": "string"
   }
   
 ]
@@ -80,9 +79,9 @@ Uploads the players score the to data base after playing the game, the score wil
 ```json
 [
   {
-    "player_id": integer,
-    "score_id": integer,
-    "score": integer,
+    "player_id": "integer",
+    "score_id": "integer",
+    "score": "integer",
   }
 ]
 ```

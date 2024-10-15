@@ -269,19 +269,14 @@ Return a list of the top 10 players
 Delete a player account from the database
 
 **request**
+```json
 {
   "username": "string"
 }
-
+```
 **Response**:
 ```json
-  {
-    "rank": "number",
-    "player_id": "number",
-    "username": "string",
-    "score": "number",
-    
-  },
+
  {
   "success": "boolean",
 }

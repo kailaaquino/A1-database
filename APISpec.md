@@ -71,7 +71,7 @@ The API calls are made in this sequence the game is played:
 1. `Post player's score `
 2. `Get player's score`
 
-### 2.1. POST Players Score - `/score/postScore/{player_id, score}` (POST)
+### 2.1. POST Players Score - `/scores` (POST)
 Uploads the players score the to data base after playing the game, the score will have the players ID
 
 **Request**:
@@ -96,7 +96,7 @@ Uploads the players score the to data base after playing the game, the score wil
 ]
 ```
 
-### 2.2. Get Players Previous scores - `/score/getScore/{player_id}` (GET)
+### 2.2. Get Players Previous scores - `/scores/{player_id}` (GET)
 
 Gets a list of all the previous scores associated with a players id.
 

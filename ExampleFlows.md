@@ -14,12 +14,17 @@ She is happy to feel the nostalgia of logging back in and seeing her old scores 
 
 
 ## Example flow 2
- Abigail’s little sibling played the game on Abigail’s account. She lost her top ranking on the leaderboard. Abigail is frustrated and wants to delete her account and statistics, and then start fresh with a new account. 	
+ Abigail happened to leave her computer running while signed in to A1. Her little sibling found her computer with a very fun looking game on the screen. Very in control of their will, her little sibling had no choice but to start playing the game and did so rather unstrategically for a good few hours. The progress and statistics from those unsatisfactory games were irreversibly saved to Abigail's account. She lost her top ranking on the leaderboard and score average was reduced beyond repair. Abigail is quite frustrated and wants to delete her account to start fresh and build a more perfect score.
 To do so, Abigail:
-* Deletes her current account
+* Deletes her current account 
   * Calls  /account/delete/{username}
 * To make a new account, she
-  * /account/?username=yourUsername
+  * Calls /account/?username=yourUsername
+* To check that her old account was deleted she searches for her old username
+  * Calls /account/{player_id} (GET)
+* Which returns an error saying there is no such player in the database
+
+After conforming that she has started anew with a blank slate, she begins the game as an experienced player and gets an even higher average than before.
 
 
 ## Example flow 3

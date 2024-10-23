@@ -1,5 +1,5 @@
 ## Example flow 1
- Alice loves to play video games and hasn’t played A1 in a while. She wants to know if her username is still registered in the game and how well she played previously. She logs into A1 to find out.
+ Alice loves to play video games and realizes that she hasn’t played one of her local classics in a long time. She had memory of creating an account on the game A1 when she was last playing and is aware that the game's database likely kept tabs on her old scores associated with her account. She wants to know if the username she remembers is still registered in the game and how well she played previously. She logs into A1 to find out.
 To do so, Alice: 
 * Starts by inputting her username 
   * Calls /account/?username=yourUsername` (GET)

@@ -9,6 +9,7 @@ To do so, Alice:
 * She decides that she also wanted to know how much progress she made with the game achievements
 * To check the achievements saved to her username she
   * Calls /achievements/history/{player_id} (GET)
+
 She is happy to feel the nostalgia of logging back in and seeing her old scores still on the game, deciding to play again for old times sake.
 
 

@@ -19,12 +19,11 @@ The API calls are made in this sequence when playing the game:
 **Request**:
 
 ```json
-[
+
   {
     "username": "string",
   }
   
-]
 ```
 
 **Response**:
@@ -44,25 +43,21 @@ Retrieves player info. Displays user's high score, dates, achievements, and rank
 **Request**:
 
 ```json
-[
   {
    "player_id": "integer"
   }
   
-]
 ```
 **Response**:
 
 ```json
-[
   {
     "high_score": "integer",
     "dates": "string",
     "achievements": "string",
     "ranking": "integer"
   }
-  
-]
+
 ```
 
 ## 2. Players' scores 
@@ -77,23 +72,19 @@ Uploads the players score the to data base after playing the game, the score wil
 **Request**:
 
 ```json
-[
   {
     "player_id": "integer",
     "score_id": "integer",
     "score": "integer",
   }
-]
 ```
 
 **Response**:
 
 ```json
-[
     {
          "success": boolean
     }
-]
 ```
 
 ### 2.2. Get Players Previous scores - `/scores/{player_id}` (GET)
@@ -103,22 +94,18 @@ Gets a list of all the previous scores associated with a players id.
 **Request**:
 
 ```json
-[
   {
     "player_id": integer
   }
-]
 ```
 **Response**:
 
 ```json
-[
   {
     "player_id": integer,
     "score_id": integer,
     "score": integer,
   }
-]
 ```
 ## 3. Achievements
 
@@ -135,21 +122,17 @@ Posts player's achievements for this round. It is added to the achievements tabl
 **Request**:
 
 ```json
-[
   {
     "player_id": "integer"
   }
-]
 ```
 
 
 **Response**:
 ```json
-[
     {
         "achievement": "string" /* shouldn't be empty */
     }
-]
 ```
 
 ### 3.2. Get Past Achievements - `/achievements/history/{player_id}` (GET)
@@ -159,22 +142,18 @@ Retrieves past achievements for a player_id. It should include the newest achiev
 **Request**:
 
 ```json
-[
   {
     "player_id": "integer"
   }
-]
 ```
 
 
 **Response**:
 
 ```json
-[
     {
         "achievement": "string" /* shouldn't be empty */
     }
-]
 ```
 
 

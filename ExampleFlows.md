@@ -28,7 +28,7 @@ After conforming that she has started anew with a blank slate, she begins the ga
 
 
 ## Example flow 3
-Ozcar is a daily player of A1. He takes pride in being #1 on the leaderboard. He wants to check the leaderboard and make sure that he is still in first place.
+Ozcar is a daily player of A1. He takes pride in being #1 on the leaderboard. Every morning he wakes up to an alarm clock, after which he immediateky checks the leaderboard to make sure that he's still in first place. He also checks his list of scores so far to estimate how much better of a gamer he is becoming.
 To do so, Ozcar:
 * He goes to the leaderboard
   * leaderboard/all_scores (GET)
